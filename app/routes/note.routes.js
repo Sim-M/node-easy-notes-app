@@ -4,6 +4,8 @@ module.exports = (app) => {
     // Create a new Note
     app.post('/notes', notes.create);
 
+    //notes are getting found by using tags like /notes?q=python & /notes?tag=learning
+
     // Retrieve all Notes
     app.get('/notes', notes.findAll);
 
