@@ -13,6 +13,7 @@ exports.create = (req, res) => {
     const note = new Note({
         title: req.body.title || "Untitled Note", 
         content: req.body.content
+        tags: req.body.tags || []        //for tags
     });
 
     // Save Note in the database
@@ -73,6 +74,7 @@ exports.update = (req, res) => {
     Note.findByIdAndUpdate(req.params.noteId, {
         title: req.body.title || "Untitled Note",
         content: req.body.content
+        tags: req.body.tags || []        //for tags
     }, {new: true})
     .then(note => {
         if(!note) {
