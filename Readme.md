@@ -16,6 +16,16 @@ npm install
 node server.js
 ```
 
+## Note Organization
+
+3. Notes now support tags and searching.
+
+Search:
+GET /notes?q=python
+
+Filter by tag:
+GET /notes?tag=learning
+
 You can browse the apis at <http://localhost:3000>
 
 ## Tutorial
